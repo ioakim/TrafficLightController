@@ -1,0 +1,407 @@
+TimeQuest Timing Analyzer report for TLC_FINAL
+Mon Nov 07 12:05:50 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'modulo6:inst3|Q0/D0'
+ 12. Setup: 'CLOCK'
+ 13. Hold: 'CLOCK'
+ 14. Hold: 'modulo6:inst3|Q0/D0'
+ 15. Setup Transfers
+ 16. Hold Transfers
+ 17. Report TCCS
+ 18. Report RSKM
+ 19. Unconstrained Paths Summary
+ 20. Clock Status Summary
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; TLC_FINAL                                           ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                   ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; CLOCK               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK }               ;
+; modulo6:inst3|Q0/D0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { modulo6:inst3|Q0/D0 } ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fmax Summary                                                                                                       ;
++------------+-----------------+---------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                          ;
++------------+-----------------+---------------------+---------------------------------------------------------------+
+; 264.76 MHz ; 264.76 MHz      ; modulo6:inst3|Q0/D0 ;                                                               ;
+; 397.14 MHz ; 304.04 MHz      ; CLOCK               ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+---------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Setup Summary                                ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; modulo6:inst3|Q0/D0 ; -2.777 ; -11.161       ;
+; CLOCK               ; -1.518 ; -4.539        ;
++---------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Hold Summary                                 ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK               ; -1.430 ; -2.857        ;
+; modulo6:inst3|Q0/D0 ; 1.813  ; 0.000         ;
++---------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++----------------------------------------------+
+; Minimum Pulse Width Summary                  ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK               ; -2.289 ; -2.289        ;
+; modulo6:inst3|Q0/D0 ; 0.234  ; 0.000         ;
++---------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'modulo6:inst3|Q0/D0'                                                                                                                ;
++--------+-----------------------+-----------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack  ; From Node             ; To Node               ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------+-----------------------+---------------------+---------------------+--------------+------------+------------+
+; -2.777 ; tlc:inst12|Q0         ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 3.444      ;
+; -2.558 ; tlc:inst12|Q1         ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 3.225      ;
+; -2.373 ; tlc:inst12|Q0         ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 3.040      ;
+; -2.114 ; tlc:inst12|Q0         ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.781      ;
+; -2.062 ; tlc:inst12|Q0         ; tlc:inst12|Q1         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.729      ;
+; -1.895 ; tlc:inst12|Q1         ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.562      ;
+; -1.881 ; tlc:inst12|Q2         ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.548      ;
+; -1.845 ; tlc:inst12|Q2         ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.512      ;
+; -1.842 ; tlc:inst12|Q2         ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.509      ;
+; -1.840 ; tlc:inst12|Q1         ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.507      ;
+; -1.835 ; tlc:inst12|Q1         ; tlc:inst12|Q2         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.502      ;
+; -1.811 ; 6-12_timer:inst|inst8 ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.478      ;
+; -1.809 ; 6-12_timer:inst|inst8 ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.476      ;
+; -1.807 ; 6-12_timer:inst|inst8 ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.474      ;
+; -1.587 ; 6-12_timer:inst|inst1 ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.254      ;
+; -1.507 ; tlc:inst12|Q0         ; tlc:inst12|Q2         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.174      ;
+; -1.506 ; 6-12_timer:inst|inst1 ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.173      ;
+; -1.501 ; 6-12_timer:inst|inst1 ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.168      ;
+; -1.373 ; tlc:inst12|Q1         ; tlc:inst12|Q1         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.040      ;
+; -1.367 ; tlc:inst12|Q2         ; tlc:inst12|Q2         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 1.000        ; 0.000      ; 2.034      ;
++--------+-----------------------+-----------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLOCK'                                                                                                                  ;
++--------+---------------------+---------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node             ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+---------------------+---------------------+-------------+--------------+------------+------------+
+; -1.518 ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q2/D2 ; CLOCK               ; CLOCK       ; 1.000        ; 0.000      ; 2.185      ;
+; -1.513 ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q0/D0 ; CLOCK               ; CLOCK       ; 1.000        ; 0.000      ; 2.180      ;
+; -1.508 ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q1/D1 ; CLOCK               ; CLOCK       ; 1.000        ; 0.000      ; 2.175      ;
+; -1.291 ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q1/D1 ; CLOCK               ; CLOCK       ; 1.000        ; 0.000      ; 1.958      ;
+; -1.289 ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q0/D0 ; CLOCK               ; CLOCK       ; 1.000        ; 0.000      ; 1.956      ;
+; -1.276 ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q2/D2 ; CLOCK               ; CLOCK       ; 1.000        ; 0.000      ; 1.943      ;
+; 1.373  ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q0/D0 ; CLOCK       ; 0.500        ; 3.348      ; 2.518      ;
+; 1.376  ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q0/D0 ; CLOCK       ; 0.500        ; 3.348      ; 2.515      ;
+; 1.873  ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q0/D0 ; CLOCK       ; 1.000        ; 3.348      ; 2.518      ;
+; 1.876  ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q0/D0 ; CLOCK       ; 1.000        ; 3.348      ; 2.515      ;
++--------+---------------------+---------------------+---------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLOCK'                                                                                                                   ;
++--------+---------------------+---------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node           ; To Node             ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------+---------------------+---------------------+-------------+--------------+------------+------------+
+; -1.430 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q0/D0 ; CLOCK       ; 0.000        ; 3.348      ; 2.515      ;
+; -1.427 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q0/D0 ; CLOCK       ; 0.000        ; 3.348      ; 2.518      ;
+; -0.930 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q0/D0 ; CLOCK       ; -0.500       ; 3.348      ; 2.515      ;
+; -0.927 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q0/D0 ; CLOCK       ; -0.500       ; 3.348      ; 2.518      ;
+; 1.722  ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q2/D2 ; CLOCK               ; CLOCK       ; 0.000        ; 0.000      ; 1.943      ;
+; 1.735  ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q0/D0 ; CLOCK               ; CLOCK       ; 0.000        ; 0.000      ; 1.956      ;
+; 1.737  ; modulo6:inst3|Q2/D2 ; modulo6:inst3|Q1/D1 ; CLOCK               ; CLOCK       ; 0.000        ; 0.000      ; 1.958      ;
+; 1.954  ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q1/D1 ; CLOCK               ; CLOCK       ; 0.000        ; 0.000      ; 2.175      ;
+; 1.959  ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q0/D0 ; CLOCK               ; CLOCK       ; 0.000        ; 0.000      ; 2.180      ;
+; 1.964  ; modulo6:inst3|Q1/D1 ; modulo6:inst3|Q2/D2 ; CLOCK               ; CLOCK       ; 0.000        ; 0.000      ; 2.185      ;
++--------+---------------------+---------------------+---------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'modulo6:inst3|Q0/D0'                                                                                                                ;
++-------+-----------------------+-----------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node               ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+-----------------------+---------------------+---------------------+--------------+------------+------------+
+; 1.813 ; tlc:inst12|Q2         ; tlc:inst12|Q2         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.034      ;
+; 1.819 ; tlc:inst12|Q1         ; tlc:inst12|Q1         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.040      ;
+; 1.947 ; 6-12_timer:inst|inst1 ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.168      ;
+; 1.952 ; 6-12_timer:inst|inst1 ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.173      ;
+; 1.953 ; tlc:inst12|Q0         ; tlc:inst12|Q2         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.174      ;
+; 2.033 ; 6-12_timer:inst|inst1 ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.254      ;
+; 2.253 ; 6-12_timer:inst|inst8 ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.474      ;
+; 2.255 ; 6-12_timer:inst|inst8 ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.476      ;
+; 2.257 ; 6-12_timer:inst|inst8 ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.478      ;
+; 2.281 ; tlc:inst12|Q1         ; tlc:inst12|Q2         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.502      ;
+; 2.286 ; tlc:inst12|Q1         ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.507      ;
+; 2.288 ; tlc:inst12|Q2         ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.509      ;
+; 2.291 ; tlc:inst12|Q2         ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.512      ;
+; 2.327 ; tlc:inst12|Q2         ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.548      ;
+; 2.341 ; tlc:inst12|Q1         ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.562      ;
+; 2.508 ; tlc:inst12|Q0         ; tlc:inst12|Q1         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.729      ;
+; 2.560 ; tlc:inst12|Q0         ; 6-12_timer:inst|inst8 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 2.781      ;
+; 2.819 ; tlc:inst12|Q0         ; tlc:inst12|Q0         ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 3.040      ;
+; 3.004 ; tlc:inst12|Q1         ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 3.225      ;
+; 3.223 ; tlc:inst12|Q0         ; 6-12_timer:inst|inst1 ; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 0.000        ; 0.000      ; 3.444      ;
++-------+-----------------------+-----------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------+
+; Setup Transfers                                                                       ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; CLOCK               ; CLOCK               ; 6        ; 0        ; 0        ; 0        ;
+; modulo6:inst3|Q0/D0 ; CLOCK               ; 2        ; 2        ; 0        ; 0        ;
+; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 20       ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------+
+; Hold Transfers                                                                        ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; CLOCK               ; CLOCK               ; 6        ; 0        ; 0        ; 0        ;
+; modulo6:inst3|Q0/D0 ; CLOCK               ; 2        ; 2        ; 0        ; 0        ;
+; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; 20       ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 9     ; 9    ;
+; Unconstrained Output Ports      ; 13    ; 13   ;
+; Unconstrained Output Port Paths ; 37    ; 37   ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------------+
+; Clock Status Summary                                           ;
++---------------------+---------------------+------+-------------+
+; Target              ; Clock               ; Type ; Status      ;
++---------------------+---------------------+------+-------------+
+; CLOCK               ; CLOCK               ; Base ; Constrained ;
+; modulo6:inst3|Q0/D0 ; modulo6:inst3|Q0/D0 ; Base ; Constrained ;
++---------------------+---------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; CAR_sensor ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RESET      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Am          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; As          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Gm          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Gs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rm          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name4   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name5   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name6   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name7   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; CAR_sensor ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RESET      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Am          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; As          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Gm          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Gs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rm          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name4   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name5   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name6   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_name7   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Mon Nov 07 12:05:46 2016
+Info: Command: quartus_sta TLC_FINAL -c TLC_FINAL
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'TLC_FINAL.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name modulo6:inst3|Q0/D0 modulo6:inst3|Q0/D0
+    Info (332105): create_clock -period 1.000 -name CLOCK CLOCK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.777
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.777             -11.161 modulo6:inst3|Q0/D0 
+    Info (332119):    -1.518              -4.539 CLOCK 
+Info (332146): Worst-case hold slack is -1.430
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.430              -2.857 CLOCK 
+    Info (332119):     1.813               0.000 modulo6:inst3|Q0/D0 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 CLOCK 
+    Info (332119):     0.234               0.000 modulo6:inst3|Q0/D0 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 755 megabytes
+    Info: Processing ended: Mon Nov 07 12:05:50 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

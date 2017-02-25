@@ -1,0 +1,653 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This SDF file should be used for ModelSim-Altera (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "TLC_FINAL")
+  (DATE "11/07/2016 12:05:54")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE CLOCK\~I)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1163:1163:1163) (1163:1163:1163))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE RESET\~I)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst3\|Q1\/D1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (956:956:956) (956:956:956))
+        (PORT datac (995:995:995) (995:995:995))
+        (PORT datad (991:991:991) (991:991:991))
+        (IOPATH dataa regin (1183:1183:1183) (1183:1183:1183))
+        (IOPATH datac regin (804:804:804) (804:804:804))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst3\|Q1\/D1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (2185:2185:2185) (2185:2185:2185))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst3\|Q0\/D0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (1000:1000:1000) (1000:1000:1000))
+        (PORT datad (989:989:989) (989:989:989))
+        (IOPATH datac regin (804:804:804) (804:804:804))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst3\|Q0\/D0.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (2185:2185:2185) (2185:2185:2185))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst3\|Q2\/D2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (959:959:959) (959:959:959))
+        (PORT datac (1005:1005:1005) (1005:1005:1005))
+        (PORT datad (976:976:976) (976:976:976))
+        (IOPATH dataa regin (1183:1183:1183) (1183:1183:1183))
+        (IOPATH datac regin (804:804:804) (804:804:804))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst3\|Q2\/D2.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (2185:2185:2185) (2185:2185:2185))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst3\|inst18.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (976:976:976) (976:976:976))
+        (PORT datac (998:998:998) (998:998:998))
+        (PORT datad (970:970:970) (970:970:970))
+        (IOPATH dataa combout (914:914:914) (914:914:914))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|Q2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1065:1065:1065) (1065:1065:1065))
+        (PORT datac (994:994:994) (994:994:994))
+        (PORT datad (1067:1067:1067) (1067:1067:1067))
+        (IOPATH datab regin (1061:1061:1061) (1061:1061:1061))
+        (IOPATH datac regin (804:804:804) (804:804:804))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst12\|Q2.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (3481:3481:3481) (3481:3481:3481))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst23\~5.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (998:998:998) (998:998:998))
+        (PORT datad (1090:1090:1090) (1090:1090:1090))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst\|inst1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (917:917:917) (917:917:917))
+        (PORT datab (1075:1075:1075) (1075:1075:1075))
+        (PORT datac (755:755:755) (755:755:755))
+        (PORT datad (1287:1287:1287) (1287:1287:1287))
+        (IOPATH dataa regin (1183:1183:1183) (1183:1183:1183))
+        (IOPATH datab regin (1061:1061:1061) (1061:1061:1061))
+        (IOPATH datac regin (804:804:804) (804:804:804))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst\|inst1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (3481:3481:3481) (3481:3481:3481))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst\|inst8.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (915:915:915) (915:915:915))
+        (PORT datab (1072:1072:1072) (1072:1072:1072))
+        (PORT datac (988:988:988) (988:988:988))
+        (PORT datad (305:305:305) (305:305:305))
+        (IOPATH dataa regin (1183:1183:1183) (1183:1183:1183))
+        (IOPATH datab regin (1061:1061:1061) (1061:1061:1061))
+        (IOPATH datac regin (804:804:804) (804:804:804))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst\|inst8.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (3481:3481:3481) (3481:3481:3481))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE CAR_sensor\~I)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1132:1132:1132) (1132:1132:1132))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst14\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (2728:2728:2728) (2728:2728:2728))
+        (PORT datad (1076:1076:1076) (1076:1076:1076))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|Q0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (919:919:919) (919:919:919))
+        (PORT datab (1070:1070:1070) (1070:1070:1070))
+        (PORT datac (993:993:993) (993:993:993))
+        (PORT datad (305:305:305) (305:305:305))
+        (IOPATH dataa regin (1183:1183:1183) (1183:1183:1183))
+        (IOPATH datab regin (1061:1061:1061) (1061:1061:1061))
+        (IOPATH datac regin (804:804:804) (804:804:804))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst12\|Q0.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT sclr (2664:2664:2664) (2664:2664:2664))
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (3481:3481:3481) (3481:3481:3481))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (SETUP sclr (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+      (HOLD sclr (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|Q1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1292:1292:1292) (1292:1292:1292))
+        (PORT datad (1073:1073:1073) (1073:1073:1073))
+        (IOPATH datab regin (1061:1061:1061) (1061:1061:1061))
+        (IOPATH datad regin (591:591:591) (591:591:591))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_lcell_register")
+    (INSTANCE inst12\|Q1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT aclr (5968:5968:5968) (5968:5968:5968))
+        (PORT clk (3481:3481:3481) (3481:3481:3481))
+        (IOPATH (posedge clk) regout (376:376:376) (376:376:376))
+        (IOPATH (posedge aclr) regout (577:577:577) (577:577:577))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (333:333:333))
+      (HOLD datain (posedge clk) (221:221:221))
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst2\|inst27\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2918:2918:2918) (2918:2918:2918))
+        (PORT datac (2991:2991:2991) (2991:2991:2991))
+        (PORT datad (2928:2928:2928) (2928:2928:2928))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst2\|inst30\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2910:2910:2910) (2910:2910:2910))
+        (PORT datac (2976:2976:2976) (2976:2976:2976))
+        (PORT datad (2913:2913:2913) (2913:2913:2913))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst23\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2914:2914:2914) (2914:2914:2914))
+        (PORT datac (2986:2986:2986) (2986:2986:2986))
+        (PORT datad (2923:2923:2923) (2923:2923:2923))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst2\|inst35\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2917:2917:2917) (2917:2917:2917))
+        (PORT datac (2990:2990:2990) (2990:2990:2990))
+        (PORT datad (2927:2927:2927) (2927:2927:2927))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst2\|inst40.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2916:2916:2916) (2916:2916:2916))
+        (PORT datac (2988:2988:2988) (2988:2988:2988))
+        (PORT datad (2925:2925:2925) (2925:2925:2925))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst2\|inst44\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2913:2913:2913) (2913:2913:2913))
+        (PORT datac (2974:2974:2974) (2974:2974:2974))
+        (PORT datad (2916:2916:2916) (2916:2916:2916))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst2\|inst47.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2918:2918:2918) (2918:2918:2918))
+        (PORT datac (2992:2992:2992) (2992:2992:2992))
+        (PORT datad (2929:2929:2929) (2929:2929:2929))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst23\~1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2908:2908:2908) (2908:2908:2908))
+        (PORT datad (2916:2916:2916) (2916:2916:2916))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst19\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1072:1072:1072) (1072:1072:1072))
+        (PORT datac (2176:2176:2176) (2176:2176:2176))
+        (PORT datad (1087:1087:1087) (1087:1087:1087))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst23\~2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1062:1062:1062) (1062:1062:1062))
+        (PORT datac (2171:2171:2171) (2171:2171:2171))
+        (PORT datad (1074:1074:1074) (1074:1074:1074))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst23\~3.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2911:2911:2911) (2911:2911:2911))
+        (PORT datad (2915:2915:2915) (2915:2915:2915))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst17\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (2912:2912:2912) (2912:2912:2912))
+        (PORT datac (2973:2973:2973) (2973:2973:2973))
+        (PORT datad (2916:2916:2916) (2916:2916:2916))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE inst12\|inst23\~4.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1075:1075:1075) (1075:1075:1075))
+        (PORT datac (2179:2179:2179) (2179:2179:2179))
+        (PORT datad (1092:1092:1092) (1092:1092:1092))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datac combout (511:511:511) (511:511:511))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE pin_name1\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1699:1699:1699) (1699:1699:1699))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE pin_name2\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1705:1705:1705) (1705:1705:1705))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE pin_name3\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1695:1695:1695) (1695:1695:1695))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE pin_name4\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1696:1696:1696) (1696:1696:1696))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE pin_name5\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1810:1810:1810) (1810:1810:1810))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE pin_name6\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1693:1693:1693) (1693:1693:1693))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE pin_name7\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (612:612:612) (612:612:612))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE Rm\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1957:1957:1957) (1957:1957:1957))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE Am\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2397:2397:2397) (2397:2397:2397))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE Gm\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2485:2485:2485) (2485:2485:2485))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE Rs\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2482:2482:2482) (2482:2482:2482))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE As\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1954:1954:1954) (1954:1954:1954))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE Gs\~I)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2473:2473:2473) (2473:2473:2473))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+)

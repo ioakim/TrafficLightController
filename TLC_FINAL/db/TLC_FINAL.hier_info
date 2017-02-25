@@ -1,0 +1,110 @@
+|TLC_FINAL
+pin_name1 <= formative:inst2.OUT_a
+CAR_sensor => inst15.IN0
+CLOCK => modulo6:inst3.CLOCK
+RESET => modulo6:inst3.RESET
+RESET => 6-12_timer:inst.reset
+RESET => tlc:inst12.RESET
+pin_name2 <= formative:inst2.OUT_b
+pin_name3 <= formative:inst2.OUT_c
+pin_name4 <= formative:inst2.OUT_d
+pin_name5 <= formative:inst2.OUT_e
+pin_name6 <= formative:inst2.OUT_f
+pin_name7 <= formative:inst2.OUT_g
+Rm <= tlc:inst12.Rm
+Am <= tlc:inst12.Am
+Gm <= tlc:inst12.Gm
+Rs <= tlc:inst12.Rs
+As <= tlc:inst12.As
+Gs <= tlc:inst12.Gs
+
+
+|TLC_FINAL|formative:inst2
+OUT_a <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+D => inst24.IN0
+C => inst22.IN0
+C => inst26.IN1
+C => inst28.IN1
+C => inst29.IN1
+C => inst33.IN1
+C => inst34.IN1
+C => inst36.IN1
+C => inst46.IN1
+B => inst23.IN0
+B => inst28.IN2
+B => inst31.IN2
+B => inst34.IN2
+B => inst37.IN1
+B => inst41.IN2
+B => inst42.IN1
+B => inst46.IN2
+A => inst25.IN3
+A => inst.IN0
+A => inst29.IN3
+A => inst32.IN3
+A => inst34.IN3
+A => inst38.IN2
+A => inst39.IN1
+A => inst37.IN2
+A => inst43.IN2
+A => inst42.IN2
+A => inst46.IN3
+OUT_b <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+OUT_c <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+OUT_d <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+OUT_e <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+OUT_f <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+OUT_g <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_FINAL|tlc:inst12
+T6 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+RESET => Q0.ACLR
+RESET => Q1.ACLR
+RESET => Q2.ACLR
+CLOCK => Q0.CLK
+CLOCK => Q1.CLK
+CLOCK => Q2.CLK
+DONE => inst12.IN3
+DONE => inst13.IN2
+CAR => inst13.IN3
+T12 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+Rm <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Am <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+Gm <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+Rs <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+As <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+Gs <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+Q2_OUT <= Q2.DB_MAX_OUTPUT_PORT_TYPE
+Q1_OUT <= Q1.DB_MAX_OUTPUT_PORT_TYPE
+Q0_OUT <= Q0.DB_MAX_OUTPUT_PORT_TYPE
+pin_name1 <= <GND>
+
+
+|TLC_FINAL|6-12_timer:inst
+output <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+reset => inst1.ACLR
+reset => inst8.ACLR
+clock => inst1.CLK
+clock => inst8.CLK
+T12 => inst2.IN0
+T12 => inst7.IN1
+T6 => inst6.IN2
+T6 => inst.IN0
+Q1_OUT <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Q0_OUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_FINAL|modulo6:inst3
+OUTPUT <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+RESET => Q0/D0.ACLR
+RESET => Q2/D2.ACLR
+RESET => Q1/D1.ACLR
+CLOCK => Q0/D0.CLK
+CLOCK => Q2/D2.CLK
+CLOCK => Q1/D1.CLK
+Q2_OUT <= Q2/D2.DB_MAX_OUTPUT_PORT_TYPE
+Q1_OUT <= Q1/D1.DB_MAX_OUTPUT_PORT_TYPE
+Q0_OUT <= Q0/D0.DB_MAX_OUTPUT_PORT_TYPE
+
+

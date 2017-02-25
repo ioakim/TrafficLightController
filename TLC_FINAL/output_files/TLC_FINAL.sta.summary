@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'modulo6:inst3|Q0/D0'
+Slack : -2.777
+TNS   : -11.161
+
+Type  : Setup 'CLOCK'
+Slack : -1.518
+TNS   : -4.539
+
+Type  : Hold 'CLOCK'
+Slack : -1.430
+TNS   : -2.857
+
+Type  : Hold 'modulo6:inst3|Q0/D0'
+Slack : 1.813
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLOCK'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'modulo6:inst3|Q0/D0'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------
